@@ -1,0 +1,617 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 150ms;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.fadeOutUp {
+  animation-name: fadeOutUp;
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 150ms;
+  animation-fill-mode: both;
+}
+.zoom-in-enter-active,
+.zoom-in-leave-active {
+  transition: opacity 150ms;
+}
+.zoom-in-enter-active .animation-content,
+.zoom-in-leave-active .animation-content,
+.zoom-in-enter-active .animation-content,
+.zoom-in-leave-active .animation-content {
+  transition: transform 150ms;
+}
+.zoom-in-enter,
+.zoom-in-leave-active {
+  opacity: 0;
+}
+.zoom-in-enter .animation-content,
+.zoom-in-leave-active .animation-content,
+.zoom-in-enter .animation-content,
+.zoom-in-leave-active .animation-content {
+  transform: scale(0.5);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: "Microsoft Yahei", "Arial";
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html,
+body {
+  font-size: 12px;
+  color: #666;
+  height: 100%;
+  min-height: 100%;
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+strong,
+b {
+  font-weight: inherit;
+}
+em,
+i {
+  font-style: inherit;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: #333;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.col-24 {
+  width: 100%;
+  float: left;
+  display: block;
+}
+.col-23 {
+  width: 95.83%;
+  float: left;
+  display: block;
+}
+.col-22 {
+  width: 91.66%;
+  float: left;
+  display: block;
+}
+.col-21 {
+  width: 87.5%;
+  float: left;
+  display: block;
+}
+.col-20 {
+  width: 83.33%;
+  float: left;
+  display: block;
+}
+.col-19 {
+  width: 79.16%;
+  float: left;
+  display: block;
+}
+.col-18 {
+  width: 75%;
+  float: left;
+  display: block;
+  min-height: 1px;
+}
+.col-17 {
+  width: 70.83%;
+  float: left;
+  display: block;
+}
+.col-16 {
+  width: 66.66%;
+  float: left;
+  display: block;
+}
+.col-15 {
+  width: 62.5%;
+  float: left;
+  display: block;
+}
+.col-14 {
+  width: 58.33%;
+  float: left;
+  display: block;
+}
+.col-13 {
+  width: 54.16%;
+  float: left;
+  display: block;
+}
+.col-12 {
+  width: 50%;
+  float: left;
+  display: block;
+  min-height: 1px;
+}
+.col-11 {
+  width: 45.83%;
+  float: left;
+  display: block;
+}
+.col-10 {
+  width: 41.66%;
+  float: left;
+  display: block;
+}
+.col-9 {
+  width: 37.5%;
+  float: left;
+  display: block;
+}
+.col-8 {
+  width: 33.33%;
+  float: left;
+  display: block;
+}
+.col-7 {
+  width: 29.16%;
+  float: left;
+  display: block;
+}
+.col-6 {
+  width: 25%;
+  float: left;
+  display: block;
+}
+.col-5 {
+  width: 20.83%;
+  float: left;
+  display: block;
+}
+.col-4 {
+  width: 16.66%;
+  float: left;
+  display: block;
+}
+.col-3 {
+  width: 12.5%;
+  float: left;
+  display: block;
+}
+.col-2 {
+  width: 8.33%;
+  float: left;
+  display: block;
+  min-height: 1px;
+}
+.col-1 {
+  width: 4.16%;
+  float: left;
+  display: block;
+}
+.outer-bg {
+  padding: 20px 24px;
+  background: #f7f7f8;
+  box-shadow: inset 0 10px 10px #ececed;
+}
+.info-bg {
+  padding: 20px 30px;
+  background: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(55, 55, 55, 0.6);
+  height: 100%;
+  z-index: 1;
+}
+.is-disabled *,
+.is-disabled,
+[disabled] {
+  cursor: not-allowed !important;
+}
+.title-header {
+  *zoom: 1;
+}
+.title-header:before,
+.title-header:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.title-header:after {
+  clear: both;
+}
+.title-header h3 {
+  height: 28px;
+  line-height: 28px;
+  font-size: 16px;
+  padding-left: 8px;
+  color: #000;
+  float: left;
+  position: relative;
+}
+.title-header h3:before {
+  content: '';
+  height: 14px;
+  width: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+}
+.title-header .title-btn {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 16px;
+  border: 1px solid #badcff;
+  color: #1d86f4;
+  display: inline-block;
+  font-size: 14px;
+  float: left;
+  border-radius: 2px;
+  background-color: #fff;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.title-header .title-btn:hover {
+  background-color: #f2f8ff;
+}
+.title-header .title-btn .iconfont {
+  font-size: 14px;
+  margin-right: 6px;
+}
+.view-col-content .view-col {
+  *zoom: 1;
+  margin-bottom: 13px;
+  min-height: 1px;
+}
+.view-col-content .view-col:before,
+.view-col-content .view-col:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.view-col-content .view-col:after {
+  clear: both;
+}
+.view-col-content .view-col .view-label {
+  float: left;
+  width: 30%;
+  text-align: right;
+  min-height: 1px;
+}
+.view-col-content .view-col .view-label.one-column {
+  width: 15%;
+}
+.view-col-content .view-col .view-show {
+  float: left;
+  width: 70%;
+  padding-left: 8px;
+  color: #000;
+}
+.view-col-content .view-col .view-show.one-column {
+  width: 75%;
+}
+.view-col-content .view-col:last-child {
+  margin-bottom: 0;
+}
+.view-col-content .view-title {
+  margin-bottom: 6px;
+  width: 15%;
+  text-align: right;
+}
+.view-col-content .view-title h4 {
+  line-height: 1;
+  color: #000;
+  font-size: 12px;
+  position: relative;
+}
+.view-col-content .view-title h4:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #000;
+  position: absolute;
+  right: 55px;
+  top: 1px;
+  display: inline-block;
+}
+.edit-col-content .edit-col {
+  *zoom: 1;
+  margin-bottom: 14px;
+}
+.edit-col-content .edit-col:before,
+.edit-col-content .edit-col:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.edit-col-content .edit-col:after {
+  clear: both;
+}
+.edit-col-content .edit-col .edit-label {
+  line-height: 28px;
+  text-align: right;
+  min-height: 1px;
+  color: #666;
+  float: left;
+}
+.edit-col-content .edit-col .edit-label.one-column {
+  width: 15%;
+}
+.edit-col-content .edit-col .edit-label.two-column {
+  width: 30%;
+}
+.edit-col-content .edit-col .edit-show {
+  line-height: 28px;
+  padding-left: 8px;
+  min-height: 1px;
+  float: left;
+}
+.edit-col-content .edit-col .edit-show .vbl-select,
+.edit-col-content .edit-col .edit-show .vbl-input {
+  margin: 0;
+}
+.edit-col-content .edit-col .edit-show.one-column {
+  width: 85%;
+}
+.edit-col-content .edit-col .edit-show.one-column .vbl-textarea {
+  width: 75%;
+}
+.edit-col-content .edit-col .edit-show.two-column {
+  width: 70%;
+}
+.edit-col-content .edit-col .edit-show.two-column .vbl-select,
+.edit-col-content .edit-col .edit-show.two-column .vbl-input {
+  width: 75%;
+  display: block;
+}
+.edit-col-content .edit-col .edit-show.provice {
+  width: 70%;
+}
+.edit-col-content .edit-col .computations {
+  padding-left: 25%;
+}
+.edit-col-content .edit-col:last-child {
+  margin-bottom: 0;
+}
+.edit-col-content .edit-title {
+  margin-bottom: 0;
+  width: 15%;
+  text-align: right;
+}
+.edit-col-content .edit-title h4 {
+  line-height: 1;
+  color: #000;
+  font-size: 12px;
+  position: relative;
+}
+.edit-col-content .edit-title h4:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #000;
+  position: absolute;
+  right: 55px;
+  top: 1px;
+  display: inline-block;
+}
+.vbl-button {
+  padding: 0 16px;
+  height: 28px;
+  line-height: 28px;
+  background-color: #fff;
+  border: 1px solid #1d86f4;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #1d86f4;
+}
+.vbl-button:hover {
+  background-color: #f2f8ff;
+}
+.vbl-button .iconfont {
+  margin-right: 6px;
+}
+.common-footer {
+  text-align: center;
+  padding-top: 30px;
+}
+.common-footer button {
+  margin: 0 7px;
+}
+.crumbs {
+  font-size: 14px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+.crumbs .crumbs-info .active:hover {
+  color: #39f;
+}
+.crumbs .crumbs-info a:hover {
+  color: #39f;
+}
+.crumbs .crumbs-info.isTrue > a {
+  cursor: pointer;
+  pointer-events: none;
+  color: #666;
+}
+.crumbs .crumbs-info > a {
+  float: left;
+  display: block;
+  color: #666;
+}
+.crumbs .crumbs-info > span {
+  margin: 0 10px;
+  color: #666;
+  display: block;
+  float: left;
+}
+.crumbs .crumbs-info:last-child > span {
+  display: none;
+}
