@@ -4,13 +4,13 @@ import BreadCrumbs from './common/BreadCrumbs';
 
 const Crumbs = [{
 	name: '营销服务平台',
-	src: 'www.baidu.com'
+	src: ''
 }, {
 	name: '线索/申请管理',
 	src: 'www.baidu.com'
 }, {
 	name: '线索详情',
-	src: 'www.baidu.com'
+	src: ''
 }]
 
 

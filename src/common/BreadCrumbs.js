@@ -7,7 +7,11 @@ class BreadCrumbs extends React.Component {
 				<ul className="clearfix">
 					{
 						this.props.Crumbs.map((item)=> {
-							return  <li key={item.name} className="crumbs-info pull-left">
+							let isTrue = '';
+							if ( item.src === '' ) {
+								isTrue = ' isTrue';
+							}
+							return <li key={item.name} className={"crumbs-info pull-left"+isTrue}>
 												<a href={item.src}>{item.name}</a>
 												<span>></span>
 											</li>
